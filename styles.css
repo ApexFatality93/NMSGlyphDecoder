@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+@font-face {
+    font-family: 'NMS Glyphs';
+    src: url('/bin/NMS-Glyphs-Mono.ttf') format('truetype');
+}
+
+.header {
+    position: relative;
+    text-align: right;
+    padding: 10px;
+}
+
+h1 {
+    color: #007BFF; 
+    font-family: Nunito;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
+}
+
+body {
+    font-family: Nunito;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#container {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(8,auto);
+    max-width: 40rem;
+    margin: auto;
+}
+
+/* Cropped screenshot */
+#ss-canvas {
+    border-color: #fff;
+    height: 10px;
+    width: 20px;
+    padding-top: 5px;
+    margin: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.txt-glyph-disp {
+    font-family: "NMS Glyphs" !important;
+    font-weight: bold;
+    font-size: 33px;
+}
+
+#textInput {
+    font-family: "NMS Glyphs";
+    width: 400px;
+    padding: 10px;
+    font-size: 30px;
+    margin-top: 20px;
+    border: 1px solid #ccc; /* border to the input field */
+}
+
+#error {
+    color: red;
+    margin-top: 5px;
+}
+
+.glyph {
+    font-family: "NMS Glyphs" !important;
+    font-weight: bold !important;
+    font-size: 40px !important; 
+}
+
+button {
+    font-family: Nunito;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 7.5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+button#clearButton {
+    background-color: #dc3545;
+}
+
+button#clearLastCharButton {
+    background-color: #dc3545;
+}
+
+button#darkModeToggle {
+    background-color: #596b78;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+/* Choose file button */
+[type=file]::file-selector-button {
+    font-family: Nunito;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 14px;
+    /* margin: 7.5px; */
+    cursor: pointer;
+    border: none;
+    background-color: #596b78;
+    color: white;
+    border-radius: 5px;
+}
+
+.built-by {
+	margin: 2em;
+	font-size: 1.25rem;
+}
+
+.built-by img {
+	max-height: 2rem;
+	border-radius: 50%;
+}
+
+/* Styles for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; 
+    }
+
+    #textInput {
+        width: 50%; 
+    }
+
+    button {
+        font-size: 12px; 
+        margin: 5px;
+    }
+
+    .glyph {
+        font-size: 30px !important; 
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        max-width: 20rem;
+        margin: auto;
+    }
+}
