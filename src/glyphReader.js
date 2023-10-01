@@ -13,7 +13,7 @@ export function buildGlyphModal(dispFcn) {
 
     glyph.display = dispFcn
 
-    tmImage.load("/bin/model.json", "/bin/metadata.json").then(model => glyph.model = model)
+    tmImage.load("./bin/model.json", "./bin/metadata.json").then(model => glyph.model = model)
 }
 
 Glyph.prototype.loadGlyphImage = function (evt) {
