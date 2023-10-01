@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'NMS Glyphs';
-    src: url('/bin/NMS-Glyphs-Mono.ttf') format('truetype');
+    src: url('./bin/NMS-Glyphs-Mono.ttf') format('truetype');
 }
 
 .header {
