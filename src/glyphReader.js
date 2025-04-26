@@ -125,3 +125,23 @@ Glyph.prototype.extractGlyphs = function () {
         $("body")[0].style.cursor = "default"
     })
 }
+
+
+
+const inputField = document.getElementById("textInput");
+
+function adjustFontSize() {
+  const inputWidth = inputField.offsetWidth;
+  const fontSizePercentage = 7.5; // 85% of the input field width
+
+  // Calculate the font size
+  const fontSize = (inputWidth * fontSizePercentage) / 100;
+
+  inputField.style.fontSize = fontSize + "px";
+}
+
+// Call the function initially
+adjustFontSize();
+
+// Call the function whenever the window is resized
+window.addEventListener("resize", adjustFontSize);
