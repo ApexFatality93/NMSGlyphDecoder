@@ -13,7 +13,7 @@
 }
 
 h1 {
-    color: #007BFF; 
+    color: #3CB5A9; 
     font-family: Nunito;
     font-weight: bold;
     text-align: center;
@@ -30,7 +30,7 @@ body {
 }
 
 body.dark-mode {
-    background-color: #333;
+    background-color: #38383A;
     color: #fff;
 }
 
@@ -46,8 +46,11 @@ body.dark-mode {
 /* Cropped screenshot */
 #ss-canvas {
     border-color: #fff;
-    height: 10px;
-    width: 20px;
+    /* height: 10px;
+    width: 20px; */
+    max-width: 60%;
+    max-height: auto !important;
+    height: auto !important;
     padding-top: 5px;
     margin: auto;
     display: block;
@@ -64,11 +67,13 @@ body.dark-mode {
 
 #textInput {
     font-family: "NMS Glyphs";
-    width: 400px;
+    /* width: 400px; */
     padding: 10px;
     font-size: 30px;
     margin-top: 20px;
     border: 1px solid #ccc; /* border to the input field */
+    width: 45%;
+    height: auto;
 }
 
 #error {
@@ -90,7 +95,7 @@ button {
     margin: 7.5px;
     cursor: pointer;
     border: none;
-    background-color: #007BFF;
+    background-color: #3CB5A9;
     color: white;
     border-radius: 5px;
 }
@@ -114,6 +119,10 @@ button#darkModeToggle {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
+a {
+    color: #3CB5A9;
+}
 
 /* Choose file button */
 [type=file]::file-selector-button {
@@ -146,7 +155,8 @@ button#darkModeToggle {
     }
 
     #textInput {
-        width: 50%; 
+        width: 40%; 
+        /* font-size: 30px; */
     }
 
     button {
@@ -164,4 +174,43 @@ button#darkModeToggle {
         max-width: 20rem;
         margin: auto;
     }
+
+    .input-container {
+        flex-direction: column;
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+
+    /* #ss-canvas {
+        max-width: 90%;
+        max-height: auto;
+    } */
+}
+
+@media screen and (max-width: 636px) {
+
+    #textInput {
+        width: 45%; 
+    }
+
+    #ss-canvas {
+        max-width: 45%;
+        max-height: auto;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    #textInput {
+        width: 70%; 
+    }
+
+    #ss-canvas {
+        max-width: 75%;
+        max-height: auto;
+    }
+
 }
